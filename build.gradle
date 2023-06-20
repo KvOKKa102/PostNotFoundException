@@ -1,0 +1,25 @@
+plugins {
+    id 'jacoco'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.21'
+    id 'application'
+}
+
+group = 'ru.netology'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.13.2'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+kotlin {
+    jvmToolchain(11)
+}
+
+application {
+    mainClassName = 'MainKt'
+}
